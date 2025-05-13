@@ -1,5 +1,3 @@
-
-import { title } from "process";
 import UI from "./ui";
 
 export const metadata = {

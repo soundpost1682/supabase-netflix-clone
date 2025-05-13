@@ -12,7 +12,7 @@ export default function Header() {
           <li>Dramas</li>
         </ul>
       </nav>
-    <div className="flex w-full max-w-72 gap-2 items-center border border-white bg-transparent text-white rounded-md p-2" type="text">
+    <div className="flex w-full max-w-72 gap-2 items-center border border-white bg-transparent text-white rounded-md p-2">
       <i className="fas fa-search"/>
       <input className="bg-transparent" placeholder="Find your movies" />
       </div>
