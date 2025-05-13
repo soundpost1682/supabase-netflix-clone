@@ -7,5 +7,5 @@ export const metadata = {
   descriptsion: 'Netflix clone using TMDB API',
 }
 export default function Home() {
-  return <main>Netflix clone</main>
+  return <UI/>
 }

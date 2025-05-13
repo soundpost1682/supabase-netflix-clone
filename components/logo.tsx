@@ -1,17 +1,19 @@
-'use client';
+"use client";
 import Image from "next/image";
+import Link from "node_modules/next/link";
 
 export default function Logo() {
   return (
     <div className="flex items-center gap-1">
-      <Image src="/images/dropbox_icon.png" alt="Mini Dropbox"
-  width={50} height={30} 
-  className="!w-8 !h-auto"
-  />
-  <span className="text-xl font-bold">MiniBox</span>
+      <Link href='/'>
+      <Image
+        src="/images/tmdbflix_logo.png"
+        alt="TMDB Logo"
+        width={50}
+        height={30}
+        className="!w-20 !h-auto"
+      />
+      </Link>
     </div>
-
-  )
-  
-  
+  );
 }
