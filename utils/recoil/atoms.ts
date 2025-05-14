@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 
-export const seearchState= atom({
+export const searchState= atom({
   key : 'searchState',
   default : '',
 })

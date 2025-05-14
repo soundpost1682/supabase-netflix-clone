@@ -16,3 +16,15 @@ export async function searchMovies(search = ''){
   return data
 
 }
+
+export async function getMovie(id){
+  const supabase = await createServerSupabaseClient()
+  const {data,error} = await supabase
+  .from('movie').select('*')
+  .eq('id', id)
+  .maybeSingle()
+
+  handleError(error)
+  return data
+}
+  
