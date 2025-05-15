@@ -19,7 +19,6 @@ export default async function MovieDetail({ params }) {
   return (
     <main className="py-16 flex items-center bg-black text-white w-full absolute top-0 bottom-0 left-0 right-0">
       {movie ? <UI movie={movie}/> : <div>Movie not found</div>}
-      
     </main>
   );
 }

@@ -30,9 +30,7 @@ export default function MovieCardList() {
   })
 
   useEffect(()=>{
-    if (
-      inView && hasNextPage && !isFetching && !isFetchingNextPage
-    ) {
+    if (inView && hasNextPage && !isFetching && !isFetchingNextPage) {
       fetchNextPage()
     }
   },[inView, hasNextPage])
@@ -43,7 +41,6 @@ export default function MovieCardList() {
 
   return (
     <div className="grid gap-1 md:grid-cols-4 grid-cols-3 w-full h-full">
-      {(isFetching || isFetchingNextPage) && <Spinner />}
       {<>
       {data?.pages?.map(page=>page.data)?.flat()?.map((movie)=>(
         <MovieCard key={movie.id} movie={movie}/>
@@ -51,6 +48,7 @@ export default function MovieCardList() {
       <div ref={ref}></div>  
       </>
     }
+    {(isFetching || isFetchingNextPage) && <Spinner />}
     </div>
   )
 }
